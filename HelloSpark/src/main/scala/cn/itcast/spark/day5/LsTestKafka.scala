@@ -24,7 +24,7 @@ object LsTestKafka {
       val data = JSONObject.fromObject(line._2)
       Some(data)
     })
-
+kdjflkdjfldk
 
     // Compute user click times
     //      val userClicks = events.map(x => (x.getString("uid"), x.getInt("click_count"))).reduceByKey(_ + _)
