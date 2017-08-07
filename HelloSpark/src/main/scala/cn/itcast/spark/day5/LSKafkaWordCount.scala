@@ -9,10 +9,10 @@ import org.apache.spark.streaming.kafka.KafkaUtils
 
 object LSKafkaWordCount {
 
-//  val updateFunc = (iter: Iterator[(String, Seq[Int], Option[Int])]) => {
-//    //iter.flatMap(it=>Some(it._2.sum + it._3.getOrElse(0)).map(x=>(it._1,x)))
-//    iter.flatMap { case (x, y, z) => Some(y.sum + z.getOrElse(0)).map(i => (x, i)) }
-//  }
+  //  val updateFunc = (iter: Iterator[(String, Seq[Int], Option[Int])]) => {
+  //    //iter.flatMap(it=>Some(it._2.sum + it._3.getOrElse(0)).map(x=>(it._1,x)))
+  //    iter.flatMap { case (x, y, z) => Some(y.sum + z.getOrElse(0)).map(i => (x, i)) }
+  //  }
 
   def main(args: Array[String]) {
     LoggerLevels.setStreamingLogLevels()
@@ -28,9 +28,10 @@ object LSKafkaWordCount {
       val data = JSONObject.fromObject(line._2)
       Some(data)
     })
-    events.print()
-//    val words = data.map(_._2).flatMap(_.split(" "))
-//    val wordCounts = words.map((_, 1)).updateStateByKey(updateFunc, new HashPartitioner(ssc.sparkContext.defaultParallelism), true)
+    val userClicks = events.map(x => (x.getString("offset"), x.getInt("method")))
+    userClicks.print()
+    //    val words = data.map(_._2).flatMap(_.split(" "))
+    //    val wordCounts = words.map((_, 1)).updateStateByKey(updateFunc, new HashPartitioner(ssc.sparkContext.defaultParallelism), true)
     ssc.start()
     ssc.awaitTermination()
   }

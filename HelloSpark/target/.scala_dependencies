@@ -8,4 +8,5 @@
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount$$anonfun$2.class
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount.class
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount$.class
+../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount$$anonfun$3.class
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount$$anonfun$1.class
