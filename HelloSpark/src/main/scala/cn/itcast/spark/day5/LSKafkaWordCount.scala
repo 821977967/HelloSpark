@@ -24,12 +24,15 @@ object LSKafkaWordCount {
     //"Array((alog-2016-04-16, 2), (alog-2016-04-17, 2), (alog-2016-04-18, 2))"
     val topicMap = topics.split(",").map((_, numThreads.toInt)).toMap
     val data = KafkaUtils.createStream(ssc, zkQuorum, group, topicMap, StorageLevel.MEMORY_AND_DISK_SER)
-    val events = data.flatMap(line => {
+    //    data.print()
+    val messages = data.flatMap(line => {
       val data = JSONObject.fromObject(line._2)
       Some(data)
     })
-    val userClicks = events.map(x => (x.getString("offset"), x.getInt("method")))
-    userClicks.print()
+    val msg = messages.map(x => (x.getString("beat"), x.getString("timestamp")))
+    val ms1 = msg.map(y => (y.formatted("hostname"),0))
+    ms1.print()
+//    println("ms1:" + ms1 + "," + "ms2:" + ms2)
     //    val words = data.map(_._2).flatMap(_.split(" "))
     //    val wordCounts = words.map((_, 1)).updateStateByKey(updateFunc, new HashPartitioner(ssc.sparkContext.defaultParallelism), true)
     ssc.start()
