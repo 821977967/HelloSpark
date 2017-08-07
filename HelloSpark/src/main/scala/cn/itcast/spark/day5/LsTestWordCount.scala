@@ -19,5 +19,6 @@ object LsTestWordCount {
     result.print()
     scc.start()
     scc.awaitTermination()
+
   }
 }
