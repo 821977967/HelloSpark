@@ -61,15 +61,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LSKafkaWordCount.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LSKafkaWordCount.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+            <state relative-caret-position="44">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="e#30#62#0" expanded="true" />
-                <element signature="e#2766#2847#0" expanded="false" />
+                <element signature="e#2088#2169#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LSKafkaJsonTest.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/cn/itcast/spark/day5/LSKafkaJsonTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,6 +141,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/scala/cn/itcast/spark/day5/LSJsonTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/cn/itcast/spark/day5/LSKafkaJsonTest.scala" />
       </list>
     </option>
   </component>
@@ -307,7 +318,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LSKafkaWordCount">
+  <component name="RunManager" selected="Application.LSKafkaJsonTest">
     <configuration name="LSJsonTest" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -327,11 +338,30 @@
       <module name="hello-spark" />
       <envs />
     </configuration>
+    <configuration name="LSKafkaJsonTest" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cn.itcast.spark.day5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="cn.itcast.spark.day5.LSKafkaJsonTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="hello-spark" />
+      <envs />
+    </configuration>
     <configuration name="LSKafkaWordCount" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="cn.itcast.spark.day5.LSKafkaWordCount" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="10.199.109.222:2181,10.199.109.223:2181,10.199.109.224:2181 g1 message 2" />
+      <option name="PROGRAM_PARAMETERS" value="10.199.109.222:2181,10.199.109.223:2181,10.199.109.224:2181 g1 xjb-liushuai-6 2" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -460,17 +490,19 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.LSKafkaWordCount" />
       <item index="1" class="java.lang.String" itemvalue="Application.TestStreaming" />
       <item index="2" class="java.lang.String" itemvalue="Application.LsTestKafka" />
       <item index="3" class="java.lang.String" itemvalue="Application.LSJsonTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.LSKafkaJsonTest" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.LSJsonTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.LsTestKafka" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TestStreaming" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.LSKafkaJsonTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.LSJsonTest" />
+        <item index="2" class="java.lang.String" itemvalue="Application.LsTestKafka" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TestStreaming" />
       </list>
     </recent_temporary>
   </component>
@@ -557,7 +589,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/cn/itcast/spark/day5/KafkaStreamingToHbase.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/cn/itcast/spark/day5/KafkaWordCount.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -864,7 +895,7 @@
         <state relative-caret-position="330">
           <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding>
-            <element signature="e#30#62#0" expanded="true" />
+            <element signature="e#30#62#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -895,12 +926,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+        <state relative-caret-position="44">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="e#30#62#0" expanded="true" />
-            <element signature="e#2766#2847#0" expanded="false" />
+            <element signature="e#2088#2169#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/cn/itcast/spark/day5/LSKafkaJsonTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>

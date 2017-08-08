@@ -31,26 +31,27 @@ object LSKafkaWordCount {
     val dstream = KafkaUtils.createStream(ssc, zkQuorum, group, topicMap, StorageLevel.MEMORY_AND_DISK_SER)
     //    val lines = dstream.map(_._2)
 
-    val lines = dstream.flatMap(line => {
-      val data = JSONObject.fromObject(line._2)
-      Some(data)
-    })
-//    对json数据格式进行解析demo
-    val beat = lines.map(x => x.getJSONObject("beat"))
-    val hostname = beat.map(x => x.getString("hostname"))
-    val version = beat.map(x => x.getString("version"))
-    val timestamp = lines.map(x => x.getString("timestamp"))
-    hostname.print()
-    version.print()
-    timestamp.print()
-    val method = lines.map(x => x.getString("method").toInt)
+//    val lines = dstream.flatMap(line => {
+//      val data = JSONObject.fromObject(line._2)
+//      Some(data)
+//    })
 
-    val ll = method.reduce(_ + _)
-    method.print()
+    dstream.print()
+//    val method = lines.map(x => (x.getString("method"), 1))
+//    val ll = method.reduceByKey(_ + _)
+//    ll.print()
 
 
+    //    对json数据格式进行解析demo
+    /*  val beat = lines.map(x => x.getJSONObject("beat"))
+        val hostname = beat.map(x => x.getString("hostname"))
+        val version = beat.map(x => x.getString("version"))
+        val timestamp = lines.map(x => x.getString("timestamp"))
+        hostname.print()
+        version.print()
+        timestamp.print()*/
 
-//    val line = lines.map(x => (x.type.getString("method"), x.getInt("offset")))
+    //    val line = lines.map(x => (x.type.getString("method"), x.getInt("offset")))
     //    val fields = messages.map(_.split("\t"))
     //    fields.print()
     //val userClicks = events.map(x => (x.getString("uid"), x.getInt("click_count"))).reduceByKey(_ + _)
