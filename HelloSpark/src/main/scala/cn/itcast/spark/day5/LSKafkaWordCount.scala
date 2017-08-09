@@ -33,12 +33,37 @@ object LSKafkaWordCount {
       val data = JSON.parseObject(line._2)
       Some(data)
     })
+    val lines_insert = lines.filter(x => x.getJSONObject("header").getString("eventType").equals("INSERT"))
 
-    lines.print()
-/**/
-//    val method = lines.map(x => (x.getString("method"), 1))
-//    val ll = method.reduceByKey(_ + _)
-//    ll.print()
+    //    val uselines = lines.filter(_.getString())
+
+    //      取json里面表头的字段
+    val header = lines.map(x => x.getJSONObject("header"))
+    val eventType = header.map(x => x.getString("eventType"))
+//    eventType.print()
+
+
+    //    取json里面表内容字段
+    val rowList = lines.map(x => x.getJSONArray("rowList"))
+
+    //    rowList.print()
+    //      val obj = rowList.map(x => x.getJSONObject(0))
+
+
+    //    取json里面表内容字段
+    //    val rowList = lines.map(x => x.getJSONArray("rowList"))
+    //    val obj = rowList.map(x => x.getJSONObject(0))
+    //    obj.print()
+    //
+    //    val afterColumns = obj.map(x => x.getJSONArray("afterColumns"))
+    ////    val obj_after = afterColumns.map(x => x.getJSONObject(0))
+    //    val obj_after_name = obj_after.map(x => x.getString("name"))
+    //    obj_after_name.print()
+
+    /**/
+    //    val method = lines.map(x => (x.getString("method"), 1))
+    //    val ll = method.reduceByKey(_ + _)
+    //    ll.print()
 
 
     //    对json数据格式进行解析demo
