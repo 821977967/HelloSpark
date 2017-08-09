@@ -64,13 +64,13 @@
       <file leaf-file-name="LSKafkaWordCount.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="230">
+              <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
               <folding>
                 <element signature="e#30#62#0" expanded="true" />
-                <element signature="e#2648#2966#0" expanded="false" />
-                <element signature="e#2972#3053#0" expanded="false" />
-                <element signature="e#3864#4930#0" expanded="false" />
+                <element signature="e#2988#3306#0" expanded="false" />
+                <element signature="e#3312#3393#0" expanded="false" />
+                <element signature="e#4204#5270#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -546,6 +546,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="23" width="1235" height="777" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -953,13 +954,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="230">
+          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
           <folding>
             <element signature="e#30#62#0" expanded="true" />
-            <element signature="e#2648#2966#0" expanded="false" />
-            <element signature="e#2972#3053#0" expanded="false" />
-            <element signature="e#3864#4930#0" expanded="false" />
+            <element signature="e#2988#3306#0" expanded="false" />
+            <element signature="e#3312#3393#0" expanded="false" />
+            <element signature="e#4204#5270#0" expanded="false" />
           </folding>
         </state>
       </provider>

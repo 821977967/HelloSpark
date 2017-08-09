@@ -4,8 +4,8 @@
 ../src/main/scala/cn/itcast/spark/day5/LSJsonTest.scala -> ../src/main/scala/cn/itcast/spark/day5/LSJsonTest.scala
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> ../src/main/scala/cn/itcast/spark/day5/LoggerLevels.scala
-../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> ../src/main/scala/cn/itcast/spark/day5/LoggerLevels.scala
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala
+../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> ../src/main/scala/cn/itcast/spark/day5/LoggerLevels.scala
 -------
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaJsonTest.scala -> classes/cn/itcast/spark/day5/LSKafkaJsonTest.class
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaJsonTest.scala -> classes/cn/itcast/spark/day5/LSKafkaJsonTest$.class
@@ -23,7 +23,10 @@
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount.class
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount$.class
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount$$anonfun$3.class
+../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount$$anonfun$9.class
+../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount$$anonfun$7.class
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount$$anonfun$1.class
+../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount$$anonfun$8.class
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount$PlaneInfo$.class
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount$$anonfun$5.class
 ../src/main/scala/cn/itcast/spark/day5/LSKafkaWordCount.scala -> classes/cn/itcast/spark/day5/LSKafkaWordCount$$anonfun$6.class
