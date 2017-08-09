@@ -29,14 +29,13 @@ object LSKafkaWordCount {
     //"Array((alog-2016-04-16, 2), (alog-2016-04-17, 2), (alog-2016-04-18, 2))"
     val topicMap = topics.split(",").map((_, numThreads.toInt)).toMap
     val dstream = KafkaUtils.createStream(ssc, zkQuorum, group, topicMap, StorageLevel.MEMORY_AND_DISK_SER)
-    //    val lines = dstream.map(_._2)
+    val lines = dstream.flatMap(line => {
+      val data = JSON.parseObject(line._2)
+      Some(data)
+    })
 
-//    val lines = dstream.flatMap(line => {
-//      val data = JSONObject.fromObject(line._2)
-//      Some(data)
-//    })
-
-    dstream.print()
+    lines.print()
+/**/
 //    val method = lines.map(x => (x.getString("method"), 1))
 //    val ll = method.reduceByKey(_ + _)
 //    ll.print()
