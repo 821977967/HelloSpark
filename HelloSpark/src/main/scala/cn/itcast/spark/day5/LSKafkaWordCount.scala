@@ -47,13 +47,17 @@ object LSKafkaWordCount {
     val obj = yRowList.map(x => x.getJSONObject(0))
     val after = obj.map(x => x.getJSONArray("afterColumns"))
     val after1 = after.map(x => x.getJSONObject(1))
-    val valAfter1 = after1.map(x => x.getString("value"))
+    val valAfter1 = after1.map(x => ("click_Counts",x.getString("value").toInt))
+//    计算点击总数
+    val click_Counts = valAfter1.updateStateByKey(updateFunc, new HashPartitioner(ssc.sparkContext.defaultParallelism), true)
 
+    click_Counts.print()
 
-    val data = KafkaUtils.createStream(ssc, zkQuorum, group, topicMap, StorageLevel.MEMORY_AND_DISK_SER)
-    val words = data.map(_._2).flatMap(_.split(" "))
-    val wordCounts = words.map((_, 1)).updateStateByKey(updateFunc, new HashPartitioner(ssc.sparkContext.defaultParallelism), true)
+    //valAfter1.print()
 
+    //    val data = KafkaUtils.createStream(ssc, zkQuorum, group, topicMap, StorageLevel.MEMORY_AND_DISK_SER)
+    //    val words = data.map(_._2).flatMap(_.split(" "))
+    //    val wordCounts = words.map((_, 1)).updateStateByKey(updateFunc, new HashPartitioner(ssc.sparkContext.defaultParallelism), true)
 
 
     //    val obj = rowList.map(x => x.getJSONObject(0))
