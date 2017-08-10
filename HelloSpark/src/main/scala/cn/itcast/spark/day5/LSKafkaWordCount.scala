@@ -28,7 +28,7 @@ object LSKafkaWordCount {
     LoggerLevels.setStreamingLogLevels()
     val Array(zkQuorum, group, topics, numThreads) = args
     val sparkConf = new SparkConf().setAppName("LSKafkaWordCount").setMaster("local[2]")
-    val ssc = new StreamingContext(sparkConf, Seconds(3))
+    val ssc = new StreamingContext(sparkConf, Seconds(5))
     ssc.checkpoint("/Users/liushuai/Desktop/temp/kafkalogs")
 
     //"alog-2016-04-16,alog-2016-04-17,alog-2016-04-18"
@@ -47,9 +47,47 @@ object LSKafkaWordCount {
     val obj = yRowList.map(x => x.getJSONObject(0))
     val after = obj.map(x => x.getJSONArray("afterColumns"))
     val after1 = after.map(x => x.getJSONObject(1))
-    val valAfter1 = after1.map(x => ("click_Counts",x.getString("value").toInt))
-//    计算点击总数
+    val valAfter1 = after1.map(x => ("click_Counts", x.getString("value").toInt))
+    //    计算点击总数
     val click_Counts = valAfter1.updateStateByKey(updateFunc, new HashPartitioner(ssc.sparkContext.defaultParallelism), true)
+
+    //插入mysql数据库
+    click_Counts.foreachRDD(rdd => {
+      rdd.foreachPartition(partitionOfRecords =>{
+        val conn = ConnectPool.getConnection
+        conn.setAutoCommit(false);  //设为手动提交
+        val  stmt = conn.createStatement();
+
+        partitionOfRecords.foreach( record => {
+
+          stmt.addBatch("insert into dm_sstreaming_getdata_test (insert_time,click_sum) values (now(),'"+record._2+"')");
+        })
+
+        stmt.executeBatch();
+        conn.commit();  //提交事务
+
+      })
+    })
+
+
+//    click_Counts.foreachRDD(wd => wd.foreachPartition(
+//      data => {
+//        val conn = ConnectPool.getConn("root", "1714004716", "hh15", "dg")
+//        //val conn = ConnectPool.getConn("root", "1714004716", "h15", "dg")
+//        //插入数据
+//        //conn.prepareStatement("insert into t_word2(word,num) values('tom',23)").executeUpdate()
+//        try {
+//          for (row <- data) {
+//            println("input data is " + row._1 + "  " + row._2)
+//            val sql = "insert into t_word2(word,num) values(" + "'" + row._1 + "'," + row._2 + ")"
+//            conn.prepareStatement(sql).executeUpdate()
+//          }
+//        } finally {
+//          conn.close()
+//        }
+//      }))
+
+//---------------------------------
 
     click_Counts.print()
 
